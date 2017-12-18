@@ -1,0 +1,13 @@
+<html>
+	<header>
+		{% include 'base.html' %}
+	</header>
+	<body>
+	<form method="post">{% csrf_token %}
+	    Are you sure you want to delete "{{ form.name }}" ?
+	    <input type="submit" value="Submit" />
+	</form>
+	</body>
+	
+
+</html>

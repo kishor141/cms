@@ -1,0 +1,277 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CollegeName| Home :: CollegeName</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- css files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<link href ="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+
+
+</head>
+<body>
+<div class="mainlayouts" id="home">
+	<div class = "conatiner">
+		<div class ="jumbtron">
+		<!--//top-bar-->
+		<!-- navigation -->
+			<div class ="top-nav">
+				<nav class="navbar navbar-default">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+						</div>
+						<!-- navbar-header -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-left">
+								<li><a href="#" class="hvr-underline-from-center active">Home</a></li>
+								<li><a href="#about" class="hvr-underline-from-center scroll">About Us</a></li>
+								
+
+							</ul>
+					
+							<ul class="nav navbar-nav navbar-right">
+								
+								<li><a href="{% url 'login' %}"" <i class="fa fa-key" aria-hidden="true"></i>LOGIN</a></li>
+								
+								<!-- <li><a href="{%}" data-toggle="modal" data-target="#myModal4"><i class="fa fa-lock" aria-hidden="true"></i>REGISTER</a></li> -->
+							</ul>
+							
+						</div>
+						<div class="clearfix"> </div>	
+				</nav>
+			</div>
+	<!-- //navigation -->
+	</div>
+</div>	
+
+
+
+
+	<!--top-bar-->
+	
+	
+	<!-- Modal3 -->
+		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" >
+			<div class="modal-dialog" role="document">
+			<!-- Modal content-->
+				<div class="modal-content news">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4>Login</h4>
+							<!--newsletter-->
+							<div class="login-main">
+							  <form action="#" method="post">
+								<input type="email" placeholder="Email" required="" name="Email">
+								<input type="password" placeholder="Password" name="Password">
+								<input type="submit" value="Login">
+							</form>
+							</div>
+						<!--//newsletter-->			
+						</div>
+					</div>
+				</div>
+			 </div>
+			<div class="clearfix"></div>
+	<!-- //Modal3 -->
+
+	<!-- Modal4 -->
+		<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
+			<div class="modal-dialog" role="document">
+			<!-- Modal content-->
+				<div class="modal-content news">
+
+
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4>Register Now</h4>
+							<!--newsletter-->
+							<div class="login-main">
+							<form action="#" method="post">
+								<input type="text" placeholder="Name" name="Name">
+								<input type="email" placeholder="Email" required="" name="Email">
+								<input type="password" placeholder="Password" name="Password">
+								<input type="password" placeholder="Confirm Password" name="Password">
+								<input type="text" placeholder="Phone Number" name="Number">
+								<input type="submit" value="Register Now">
+							</form>
+							</div>
+						<!--//newsletter-->			
+						</div>
+					</div>
+				</div>
+			 </div>
+			<div class="clearfix"></div>
+	<!-- //Modal4-->
+
+
+					<div class="clearfix"></div>
+	
+
+	
+<!--main-content-->
+
+<!--about-->
+		<div class="panel panel-info">
+				<div class="panel-heading"  align = "center">
+					<h1>About <span>us</span></h1>				
+				</div>
+						
+				<div class="panel-body"  align = "center">
+
+					<div id="about" class="about">
+						<div class="container">
+								
+								<h2>Since 1980, we have been in the educational industry, providing quality education</h2>
+								<div class="specialty-grids-top">
+									<div class="col-md-4 service-box" >
+										<figure class="icon">
+											<span class="glyphicon glyphicon-education a1" aria-hidden="true"></span>
+										</figure>
+										<h5>Quality Infrstructure</h5>
+										<p>Top notch quality infrstructure for quality learning and best experience</p>
+									</div>
+									<div class="col-md-4 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+										<figure class="icon">
+											<span class="glyphicon glyphicon-home a2" aria-hidden="true"></span>
+										</figure>
+										<h5>Experienced faculties</h5>
+										<p>We have expeienced and quality equipments staff, the best you know it</p>
+									</div>
+									<div class="col-md-4 service-box wow bounceIn animated" data-wow-delay="0.4s">
+										<figure class="icon">
+											 <span class="glyphicon glyphicon-leaf a3" aria-hidden="true"></span>						
+										</figure>
+										<h5>Experience</h5>
+										<p>The best learning experience you can have, is here</p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="buttons">
+									<div class="button">
+										<h5><a href="#contact" class="scroll" id="Contact">Contact with us</a></h5>
+									</div>
+									<div class="button2">
+										<h5><a href="#" data-toggle="modal" data-target="#myModal2">Admission Now</a></h5>
+									</div>
+								</div>
+								<!-- Modal1 -->
+								<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" >
+									<div class="modal-dialog" role="document">
+									<!-- Modal content-->
+										<div class="modal-content abt">
+												<div class="modal-header">
+													<button type="button" class="close clo1" data-dismiss="modal">&times;</button>
+														<h4>Enter the Following Details</h4>
+														<form action="#" method="post" class="mod2">
+															<ul>
+																<li class="text">Name of Applicant :  </li>
+																<li class="agileits-main"><input name="name" type="text" required></li>
+															</ul>
+															<ul>
+																<li class="text">Date of Birth :  </li>
+																<li class="agileits-main"><input name="organization" type="text" required></li>
+															</ul>
+															<ul>
+																<li class="text">Father Name  :  </li>
+																<li class="agileits-main"><input name="name" type="text" required></li>
+															</ul>
+															<ul>
+																<li class="text">Gender  :  </li>
+																<li class="agileits-main"><input name="contact" type="text" required></li>
+															</ul>
+															<ul>
+																<li class="text">mobile no  :  </li>
+																<li class="agileits-main"><input name="mobile" type="text" required></li>
+															</ul>
+															<ul>
+																<li class="text">Address  :  </li>
+																<li class="agileits-main"><input name="mobile" type="text" required></li>
+															</ul>
+															<ul>
+																<li class="text">District  :  </li>
+																<li class="agileits-main"><input name="mobile" type="text" required></li>
+															</ul>
+															<ul>
+																<li class="text">State  :  </li>
+																<li class="agileits-main"><input name="mobile" type="text" required></li>
+															</ul>
+															<div class="clear"></div>
+															<div class="agile-submit">
+																<input type="submit" value="submit">
+															</div>
+														</form>
+
+												</div>
+											</div>
+										</div>
+									 </div>
+									<!-- //Modal1 -->
+									<div class="clearfix"></div>
+								</div>
+						</div>
+						<div class="about-info">
+							<img src="../images/ab.jpg" alt="about-image">
+							<div class="right-agile">
+								<h5>Information</h5>
+								<p>Established in June 1980, with its own distinct identity and tradition has been serving as the tower of learning for many generations. It has moulded the destiny of hundreds of people for a better tomorrow. The College has emerged as a leading centre for teaching, learning, and research in the field of higher education in South India. It is a great land mark in the history of the college that it was declared as an autonomous college in 2014 by the University Grants.</p>
+
+								<h5>Our Motto</h5>
+								<p>“CARITAS VERA NOBILITAS”<br>(Charity is true Nobility)</p>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					<!--//about-->
+
+						
+				</div>
+
+				<div class="panel-footer" align >
+				
+					<div class="footer" id="footer">
+
+						<div class="container">
+							<ul class="nav navbar-nav navbar-right">
+								Project by Kishor
+							
+							
+							
+							<div class="clearfix"> </div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+<!-- //footer -->
+
+<!-- js -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>

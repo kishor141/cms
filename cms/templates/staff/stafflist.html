@@ -1,0 +1,59 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Staff list</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="container">
+		<!-- {{stdlist}}	 -->
+		{% if stlist %}
+		<h2>Staff List</h2>
+		<table class="table table-bordered ">
+			<thead>
+				<tr>
+
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+					<th>Designation</th>
+					<th>place</th>
+					<th>contact Number</th>
+					<th>Edit</th>
+					<th>Delete</th>
+					
+				</tr>
+				
+			</thead>
+			<tbody>
+				{% for st in stlist %}
+				<tr>
+					<th>{{st.user.first_name}}</th>
+					<th>{{st.user.last_name}}</th>
+					<th>{{st.user.username}}</th>
+					<th>{{st.designation}}</th>
+					<th>{{st.place}}</th>
+					<th>{{st.contact}}</th>
+					<th><a href="{% url 'staff:update_staff' st.user.id st.id %}">Update</a></th>
+					<th><a href="{% url 'staff:delete_staff' st.user.id st.id %}">Delete</a></th>
+					
+					
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>Not Data </p>
+	{% endif %}
+
+
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>

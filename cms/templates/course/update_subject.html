@@ -1,0 +1,122 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Course Registration</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="container" align = "left left-justified">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h2>Subject Update</h2>
+				</div>
+						
+				<div class="panel-body">
+					
+					<form action = "." method = "post" align = "center" class="form-horizontal">
+					
+					 
+						{% csrf_token %}
+						{{form.as_p}}
+
+						
+						
+						
+						<button type ="update">Edit</button>
+						 
+					</form>
+				</div>
+
+				<div class="panel-footer">
+					<p>College Management System</p>
+				</div>
+
+			</div>
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>
+
+
+
+
+
+
+<!-- <div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Course Name :</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="cname" value="{{course_update_obj.name}}" >
+							</div>
+						</div>				
+	
+						<div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Fees :</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="fees" value="{{course_update_obj.fees}}" placeholder="{{course_update_obj.fees}}">
+							</div>
+						</div>		
+
+						<div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Eligibility :</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="eligibility" value="{{course_update_obj.eligibility}}" placeholder="{{course_update_obj.eligibility}}">
+							</div>
+						</div>	
+
+						<div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Duration :</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="duration" value="{{course_update_obj.duration}}" placeholder="{{course_update_obj.duration}}">
+							</div>
+						</div>	
+
+						<div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Number of semesters :</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="noofsemesters" value="{{course_update_obj.noofsemesters}}" placeholder="{{course_update_obj.noofsemesters}}">
+							</div>
+						</div>	
+						
+						<div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Description:</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="desc" value="{{course_update_obj.desc}}" placeholder="{{course_update_obj.desc}}">
+							</div>
+						</div>	
+
+						<div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Total Seats</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="totseats" value="{{course_update_obj.totseats}}" placeholder="{{course_update_obj.totseats}}">
+							</div>
+						</div>
+
+						<div class="row" align = "center">
+							<div class="col-sm-3 col-md-3 col-xs-3 col-lg-3">
+								<label>Total Seats</label>
+							</div>
+							<div class="col-sm-5 col-md-5 col-xs-5 col-lg-5">
+								<input type = text" name ="balseats" value="{{course_update_obj.balseats}}" placeholder="{{course_update_obj.balseats}}">
+							</div>
+						</div>
+ -->

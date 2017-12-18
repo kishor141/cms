@@ -1,0 +1,122 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Student Registration</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="container" align = "left left-justified">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+
+					<h2>Student Registration</h2>
+				</div>
+						
+				<div class="panel-body">
+					<div class ="jumbotron">
+					<form action="{{ action }}" method="POST">
+						{% csrf_token %}
+							{% if form.non_field_errors %}
+								<ul>
+									{% for error in form.non_field_errors %}
+							    		<li>{{ error }}</li>
+							    	{% endfor %}
+							    </ul>
+							{% endif %}
+							<table class="table table-striped">
+							{% for field in form %}
+								<tr>
+								<div class="row" align = "left" id="{{ field.auto_id }}_container">
+									
+
+									<div class = "clearfix">
+										
+									 		<div class="col-md-4">
+									 		<th>
+									    		{{ field.label_tag }} 
+									    		</th>
+									    		<td>{{ field }}
+											</div>
+
+											<div class="clearfix">
+
+											</div>
+											<td>
+											<div  class="col-md-2" id="{{ field.auto_id }}_errors">
+												{{ field.errors }}
+											</div>
+											</td>
+											<td>
+											{{ field.help_text }}
+											</td>
+									</div>
+								</div>	
+								</tr>
+							{% endfor %}
+
+							{% if profile_form.non_field_errors %}
+								<ul>
+									{% for error in profile_form.non_field_errors %}
+							    		<li>{{ error }}</li>
+							    	{% endfor %}
+							    </ul>
+							{% endif %}
+							
+							{% for field in profile_form %}
+								<tr>
+								<div class="row" align = "left" id="{{ field.auto_id }}_container">
+									
+
+									<div class = "clearfix">
+										<div class="col-md-4">
+										 	<th>
+										    	{{ field.label_tag }} 
+										    </th>
+									    	<td>{{ field }}</td>
+										</div>
+										<div class="clearfix">
+										</div>
+
+										
+										<div  class="col-md-2" id="{ field.auto_id }}_errors">
+											<td>{{ field.errors }}</td>
+										</div>
+										
+										<td>
+										{{ field.help_text }}
+										</td>
+									</div>
+								</div>	
+								</tr>
+							{% endfor %}
+							
+								
+								<tr>
+								<td><!-- captcha field -->
+							</td>
+							</tr>
+							<tr>
+								<td>
+							<input id="save_course" type="submit" value="Save" />
+							</td>
+						</tr>
+						</table>
+					</form>
+					
+
+				</div>
+				<div class="panel-footer">
+					<p>College Management System</p>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Course list</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+
+	
+	
+	<body>
+	
+		
+		<div class ="jumbotron">
+			<div class="container">
+			
+				{% if slist %}
+				<table class="table table-bordered ">
+					<thead>
+						<tr>
+							<th>Subject Name</th>
+							<th>Code</th>
+							<th>Description</th>
+							<th>Course</th>
+							<th>Semester</th>
+							<th>Edit</th>
+							<th>Delete</th>
+						
+					</thead>
+					<tbody>
+						{% for s in slist %}
+						<tr>
+
+							<th>{{s.name}}</th>
+							<th>{{s.code}}</th>
+							<th>{{s.desc}}</th>
+							<th>{{s.course}}</th>
+							<th>{{s.semester}}</th>
+							<th><a href="{% url 'course:subject_update' s.pk %}">Edit</a></th>
+							<th><a href="{% url 'course:subject_delete' s.pk %}">Delete</a></th>
+							
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				{% else %}
+					<p>Not Data </p>
+				{% endif %}
+
+	 		</div>
+ 		</div>
+
+ 		
+	</body>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>

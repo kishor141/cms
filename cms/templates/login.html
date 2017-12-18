@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+	</head>
+
+	<body>
+		<div class="container" align = "left left-justified">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+
+					<h2>Login</h2>
+				</div>
+						
+				<div class="panel-body">
+					<div class ="jumbotron">
+					<form action="{{ action }}" method="POST">
+						{% csrf_token %}
+							{% if form.non_field_errors %}
+								<ul>
+									{% for error in form.non_field_errors %}
+							    		<li>{{ error }}</li>
+							    	{% endfor %}
+							    </ul>
+							{% endif %}
+							<table class="table table-striped">
+							{% for field in form %}
+								<tr>
+								<div class="row" align = "left" id="{{ field.auto_id }}_container">
+									
+
+									<div class = "clearfix">
+										
+									 		<div class="col-md-4">
+									 		<th>
+									    		{{ field.label_tag }} 
+									    		</th>
+									    		<td>{{ field }}
+											</div>
+
+											<div class="clearfix">
+
+											</div>
+											<td>
+											<div  class="col-md-2" id="{{ field.auto_id }}_errors">
+												{{ field.errors }}
+											</div>
+											</td>
+											<td>
+											{{ field.help_text }}
+											</td>
+									</div>
+								</div>	
+								</tr>
+							{% endfor %}
+
+							
+							</table>
+								
+							<button class = "btn btn-info">login</button>
+					</form>
+					<br>
+				<button class = "btn btn-default"> <span class="fa fa-github"><a href="{% url 'social:begin' 'github' %}">Login with GitHub</a></span></button>
+					
+				<button class= "btn btn-info"><span class="fa fa-twitter"></span><a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a></button>	 
+
+				</div>
+
+				<div class="panel-footer">
+					<p>College Management System</p>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- <div class = "container" align = "left">
+			<form method = "post">
+				{% csrf_token %}
+				{{form.as_p}}
+				
+				<button class = "btn btn-info">login</button>
+			</form>		
+		</div> -->
+	</body>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+</html>
+
+
+
+

@@ -1,0 +1,53 @@
+ <html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="container">
+			                          
+			<div class="container">
+				
+					<h2>College Management System :Student Panel</h2>
+
+				<div class="nav nav-tabs">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Course Detail<span class="caret"></span></a>
+							<ul class="dropdown-menu"> 
+								<li><a href="{% url 'course:list_course' %}">List Course</a></li>
+								<li><a href="{% url 'course:list_subject' %}">List Subject</a></li>
+								
+							</ul>
+					</li>
+
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Exam Detail<span class="caret"></span></a>
+							<ul class="dropdown-menu"> 
+								<li><a href="{% url 'exam:new_exam' %}">New Exam</a></li>
+								<li><a href="{% url 'exam:list_exam' %}">List Exam</a></li>
+								
+							</ul>
+					</li>
+					
+					<li><a href="/logout">Logout</a></li>
+					
+				</div>
+
+			</div>
+		</div>
+		<div class = "container">
+			{% include 'student/profile.html' %}
+
+		</div>
+			}
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>

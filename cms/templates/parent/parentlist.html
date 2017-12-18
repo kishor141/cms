@@ -1,0 +1,58 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Student list</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="container">
+		<!-- {{stdlist}}	 -->
+		{% if parlist %}
+		<h2>Parent List</h2>
+		<table class="table table-bordered ">
+			<thead>
+				<tr>
+
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+					
+					<th>Occupation</th>
+					<th>Parent Of</th>
+					
+					<th>Edit</th>
+					<th>Delete</th>
+
+				</tr>
+				
+			</thead>
+			<tbody>
+				{% for par in parlist %}
+				<tr>
+					<th>{{par.user.first_name}}</th>
+					<th>{{par.user.last_name}}</th>
+					<th>{{par.user.username}}</th>
+					<th>{{par.occupation}}</th>
+					<th>{{par.parentof}}</th>
+					<th><a href="{% url 'parent:update_parent' par.user.id par.id %}">Update</a></th>
+					<th><a href="{% url 'parent:delete_parent' par.user.id par.id %}">delete</a></th>
+					
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>Not Data </p>
+	{% endif %}
+
+
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>

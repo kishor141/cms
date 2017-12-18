@@ -1,0 +1,58 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Exam list</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="container">
+		<h2>Exam List</h2>
+		{% if elist %}
+		<table class="table table-bordered ">
+			<thead>
+				<tr>
+					<th>Course Name</th>
+					<th>Semester</th>
+					<th>Exam Type</th>
+					<th>Description</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+				
+			</thead>
+			<tbody>
+				{% for e in elist %}
+				<tr>
+						<th>{{e.course}}</th>
+						<th>{{e.semester}}</th>
+						<th>{{e.examname}}</th>
+						<th>{{e.examtypename}}<t/h>
+						<th>{{e.examdesc}}</th>
+						<th>{{e.startdate}}</th>
+						<th>{{e.enddate}}</th>
+						<th><a href="{% url 'exam:update_exam' e.pk %}">Edit</a></th>
+						<th><a href="{% url 'exam:delete_exam' e.pk %}">Delete</a></th>
+
+					
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>Not Data </p>
+	{% endif %}
+
+ 		
+		</div>
+ 		
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>

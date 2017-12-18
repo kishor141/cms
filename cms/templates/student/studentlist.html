@@ -1,0 +1,69 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Student list</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="container">
+		<!-- {{stdlist}}	 -->
+		{% if stdlist %}
+		<h2>Student List</h2>
+		<table class="table table-bordered ">
+			<thead>
+				<tr>
+
+					<th>Name</th>
+					
+					<th>Username</th>
+					<th>email</th>
+					<th>age</th>
+					<th>housename</th>
+					<th>place</th>
+					<th>Edit</th>
+					<th>Delete</th>
+					
+				</tr>
+				
+			</thead>
+			<tbody>
+				{% for std in stdlist %}
+				<tr>
+					
+					<th>{{std.user.first_name}} {{std.user.last_name}} </th>
+					<th>{{std.user.username}}</th>
+					<th>{{std.user.email}}</th>
+					<th>{{std.age}}</th>
+					<th>{{std.housename}}</th>
+					<th>{{std.place}}</th>
+					<th><a href="{% url 'student:student_update' std.pk %}">Edit</a></th>
+					<th><a href="{% url 'student:student_delete' std.pk %}">Delete</a></th>
+					<!-- <th>{{std.district}}</th>
+					<th>{{std.state}}</th>
+					<th>{{std.nationality}}</th>
+					<th>{{std.contact}}</th>
+					<th>{{std.altcontact}}</th>
+					<th>{{std.school10}}</th>
+					<th>{{std.marks10}}</th>
+					<th>{{std.school12}}</th>
+					<th>{{std.marks12}}</th> -->
+					
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>Not Data </p>
+	{% endif %}
+
+
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>

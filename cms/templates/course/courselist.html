@@ -1,0 +1,55 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Course list</title>
+				
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				{% if clist %}
+				<table class="table table-bordered ">
+					<thead>
+						<tr>
+							<th>Course Name</th>
+							<th>Fees</th>
+							<th>Eligibility</th>
+							<th>Duration</th>
+							<th>Description</th>
+							<th>Toatl No of Seats</th>
+							<th>Number of seats available</th>
+							<th>Edit</th>
+							<th>Delete</th>
+						</tr>
+						
+					</thead>
+					<tbody>
+						{% for c in clist %}
+						<tr>
+							<th><a href="{% url 'course:course_detail' c.id %}">{{c.name}}</a></th>
+							<th>{{c.fees}}</th>
+							<th>{{c.eligibility}}</th>
+							<th>{{c.duration}}</th>
+							<th>{{c.desc}}</th>
+							<th>{{c.totseats}}</th>
+							<th>{{c.balseats}}</th>
+							<th><a href="{% url 'course:course_update' c.pk %}">Edit</a> </th>
+							<th><a href="{% url 'course:course_delete' c.pk %}">Delete</a> </th>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				{% else %}
+					<p>Not Data </p>
+				{% endif %}
+			</div>
+ 		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	      	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+</html>
